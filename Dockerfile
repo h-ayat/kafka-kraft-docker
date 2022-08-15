@@ -12,3 +12,4 @@ RUN apk update && apk add --no-cache bash openjdk8-jre
 COPY --from=builder /opt/kafka /opt/kafka
 COPY start_kafka.sh /bin/
 CMD [ "/bin/start_kafka.sh" ]
+EXPOSE 9092
