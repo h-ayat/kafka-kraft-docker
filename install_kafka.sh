@@ -8,6 +8,7 @@ if [[ ! $(curl -sfI "${downloadUrl}") ]]; then
     downloadUrl="https://archive.apache.org/dist/${path}"
 fi
 
+echo "Downloading ${downloadUrl}"
 wget "${downloadUrl}" -O "/tmp/kafka.tgz"
 
 tar xfz /tmp/kafka.tgz -C /opt
